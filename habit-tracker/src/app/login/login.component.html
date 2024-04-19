@@ -1,0 +1,30 @@
+<div class="login-wrapper">
+  <div class="login-container">
+    <h2>Sign in</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+      <div class="form-group">
+        <label for="email">
+          <i class="fas fa-envelope icon"></i> Email
+        </label>
+        <input type="email" id="email" formControlName="username" class="form-control" placeholder="Enter your email">
+      </div>
+      <div class="form-group">
+        <label for="password">
+          <i class="fas fa-lock icon"></i> Password
+        </label>
+        <input type="password" id="password" formControlName="password" class="form-control"
+          placeholder="Enter your password">
+        <a href="#" class="forgot-password">Forgot password?</a>
+      </div>
+      <div class="form-group form-check">
+        <label for="rememberMe" class="form-check-label"><i class="fas fa-check-square"></i>
+          Remember me</label>
+      </div>
+      <button type="submit" class="btn btn-signin" (click)="goToHabits()">Sign
+        in</button>
+      <div class="signup-link">
+        Don't have an account? <a (click)="goToRegister()">Sign up</a>
+      </div>
+    </form>
+  </div>
+</div>

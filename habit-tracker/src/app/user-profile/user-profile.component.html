@@ -1,0 +1,35 @@
+<div class="user-profile-container">
+    <h2>Edit profile</h2>
+
+    <div class="profile-photo-section">
+        <img src="./../../assets/LOGO SUNBANK A.png" alt="Profile photo">
+        <div>
+            <p>Upload your photo</p>
+            <p>Your photo should be in PNG or JPG format</p>
+            <button (click)="onChooseImage()">Choose image</button>
+            <button (click)="onRemoveImage()">Remove</button>
+        </div>
+    </div>
+
+    <div class="user-details">
+        <label>Full name</label>
+        <p>{{ user.fullName }}</p>
+
+        <label>Email</label>
+        <p>{{ user.email }}</p>
+
+        <label>Phone number</label>
+        <p>{{ user.phoneNumber }}</p>
+
+        <label>Location</label>
+        <p>{{ user.location }}</p>
+
+        <label>About me</label>
+        <p>{{ user.aboutMe }}</p>
+    </div>
+
+    <div class="actions">
+        <button (click)="goToHabits()">Cancel</button>
+        <button (click)="onSaveProfile()">Save profile</button>
+    </div>
+</div>
