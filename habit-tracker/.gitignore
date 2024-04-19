@@ -42,4 +42,4 @@ testem.log
 Thumbs.db
 
 # Secrets
-/src/environments/
+/src/environments/**
