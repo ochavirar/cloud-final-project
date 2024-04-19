@@ -1,0 +1,41 @@
+.user-profile-container {
+    /* Usar la paleta de colores de antes para estos estilos */
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    /* Ajustar según la paleta de colores */
+}
+
+.profile-photo-section img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* agregar estilos para que se parezca a la imagen cargada */
+}
+
+.user-details label {
+    font-weight: bold;
+}
+
+.user-details p {
+    background-color: #f2f2f2;
+    /* Ajustar según la paleta de colores */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* Colores de la paleta anterior */
+}
+
+/* Ajustar los botones a la paleta de colores utilizada */
