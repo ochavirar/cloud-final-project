@@ -10,13 +10,20 @@
 <div class="greeting-container">
     <div class="cards-container">
         <div class="card" *ngFor="let habit of habits">
-            <img src="{{habit.imageUrl}}" alt="{{habit.name}}">
-            <h2>{{habit.name}}</h2>
-            <p>{{habit.description}}</p>
-            <label>
-                <input type="checkbox" name="item-check" />
-                Seleccionar
-            </label>
+            <div class="card-header">
+                <h2>{{habit.habit_name}}</h2>
+            </div>
+            <div class="card-body">
+                <p>{{habit.habit_description}}</p>
+                <p class="frequency">Frecuencia semanal: {{ habit.habit_frequency }}</p>
+            </div>
+            <div class="card-footer">
+                <label class="custom-checkbox">
+                    <input type="checkbox" name="item-check" />
+                    <span class="checkmark"></span>
+                    Terminado
+                </label>
+            </div>
         </div>
     </div>
 </div>
