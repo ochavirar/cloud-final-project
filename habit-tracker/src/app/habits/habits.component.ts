@@ -6,7 +6,7 @@ import { HabitsService } from '../habits.service';
 @Component({
   selector: 'app-habits',
   standalone: true,
-  imports: [CommonModule],  // Only import CommonModule here
+  imports: [CommonModule],  
   templateUrl: './habits.component.html',
   styleUrls: ['./habits.component.css']
 })

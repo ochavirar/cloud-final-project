@@ -1,5 +1,5 @@
 .icon {
-    color: #6c757d; /* Icon color */
+    color: #6c757d; 
     margin-right: 5px;
   }
   
@@ -9,7 +9,7 @@
   }
   
   .form-group input {
-    padding-left: 30px; /* Make space for the icon inside the input */
+    padding-left: 30px; 
   }
   
 
