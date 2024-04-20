@@ -9,43 +9,14 @@
 </div>
 <div class="greeting-container">
     <div class="cards-container">
-        <!-- Tus cards como antes -->
-        <div class="card">
-            <img src="path_to_image.jpg" alt="Descripción de la imagen">
-            <h2>Hábito 1</h2>
-            <p>Esta es una breve descripción del item en cuestión.</p>
+        <div class="card" *ngFor="let habit of habits">
+            <img src="{{habit.imageUrl}}" alt="{{habit.name}}">
+            <h2>{{habit.name}}</h2>
+            <p>{{habit.description}}</p>
             <label>
                 <input type="checkbox" name="item-check" />
                 Seleccionar
             </label>
         </div>
-        <div class="card">
-            <img src="path_to_image.jpg" alt="Descripción de la imagen">
-            <h2>Hábito 2</h2>
-            <p>Esta es una breve descripción del item en cuestión.</p>
-            <label>
-                <input type="checkbox" name="item-check" />
-                Seleccionar
-            </label>
-        </div>
-        <div class="card">
-            <img src="path_to_image.jpg" alt="Descripción de la imagen">
-            <h2>Hábito 3</h2>
-            <p>Esta es una breve descripción del item en cuestión.</p>
-            <label>
-                <input type="checkbox" name="item-check" />
-                Seleccionar
-            </label>
-        </div>
-        <div class="card">
-            <img src="path_to_image.jpg" alt="Descripción de la imagen">
-            <h2>Hábito 4</h2>
-            <p>Esta es una breve descripción del item en cuestión.</p>
-            <label>
-                <input type="checkbox" name="item-check" />
-                Seleccionar
-            </label>
-        </div>
-        <!-- Repite los cards según sea necesario -->
     </div>
 </div>
