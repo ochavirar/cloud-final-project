@@ -23,6 +23,7 @@ export class HabitsComponent implements OnInit {
     this.habitsService.getHabits().subscribe({
       next: (data) => {
         this.habits = data;
+        console.log(data);
       },
       error: (error) => {
         console.error('Error fetching habits:', error);

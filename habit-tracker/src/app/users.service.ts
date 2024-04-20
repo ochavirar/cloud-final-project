@@ -8,7 +8,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component'; //
 })
 export class UserService {
 
-  private apiUrl = 'https://txtex89254.execute-api.us-east-1.amazonaws.com/user';
+  private apiUrl = 'https://txtex89254.execute-api.us-east-1.amazonaws.com/users';
 
   constructor(private http: HttpClient) { }
 
