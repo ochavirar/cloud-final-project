@@ -29,6 +29,7 @@ export class RegisterComponent implements OnInit{
       password: ['', [Validators.required]]
     });
   }
+  
   onSignUp(){
     console.log("Post new user start");
     if (this.signUpForm.valid){
