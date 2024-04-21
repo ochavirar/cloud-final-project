@@ -84,4 +84,20 @@
     color: #007bff;
     text-decoration: none;
   }
+  .form-check {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos del checkbox y la etiqueta */
+    margin-top: 10px;
+}
+
+.form-check-input {
+    margin-right: 10px; /* Espacio entre el checkbox y la etiqueta */
+    cursor: pointer;
+}
+
+.form-check-label {
+    margin-bottom: 0; /* Evita el margen inferior predeterminado en etiquetas */
+    cursor: pointer;
+}
+
   

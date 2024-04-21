@@ -1,21 +1,93 @@
-.form-group {
-    margin-bottom: 1rem;
+.navbar {
+  background-color: #4CAF50; /* Adjust the color to fit your design */
+  padding: 10px 20px;
+  color: white;
+}
+
+.navbar h1 {
+  margin: 0;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-link img.profile-img {
+  border-radius: 50%;
+  height: 50px; /* Adjust size as needed */
+}
+
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+}
+
+.card .form-group {
+  margin-bottom: 20px;
+}
+
+.card .form-group label {
+  display: block;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.card .form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Makes sure padding doesn't affect width */
+}
+
+.card-footer {
+  text-align: right;
+  padding-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* Improve focus state for accessibility */
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    margin: 10px;
+    padding: 10px;
   }
-  
+
   .btn {
-    margin-top: 1rem;
-    margin-right: 0.5rem;
+    width: 100%;
+    margin-top: 10px;
   }
-  
-  .btn-primary {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
+
+  .card-footer {
+    text-align: center;
   }
-  
-  .btn-secondary {
-    color: #fff;
-    background-color: #6c757d;
-    border-color: #6c757d;
-  }
-  
+}

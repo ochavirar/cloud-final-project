@@ -55,4 +55,12 @@ export class HabitCreationComponent implements OnInit{
     this.router.navigate(['habits']);
   }
 
+  goToProfile() {
+    this.router.navigate(['/user-profile']);
+  }
+
+  logOut(){
+    localStorage.removeItem("userID");
+    this.router.navigate(['login']);
+  }
 }
