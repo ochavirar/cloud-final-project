@@ -1,7 +1,8 @@
 <!-- greeting-component.html -->
 <div class="navbar">
     <div class="navbar-content">
-        <h1>Hola de nuevo, Christian</h1>
+        <h1>Hola de nuevo, {{userName}}</h1>
+        <button (click)="goToCreateHabit()">Add habit</button>
         <div class="profile-link" (click)="goToProfile()">
             <p>Perfil</p>
         </div>
@@ -11,11 +12,11 @@
     <div class="cards-container">
         <div class="card" *ngFor="let habit of habits">
             <div class="card-header">
-                <h2>{{habit.habit_name}}</h2>
+                <h2>{{habit.habitName}}</h2>
             </div>
             <div class="card-body">
-                <p>{{habit.habit_description}}</p>
-                <p class="frequency">Frecuencia semanal: {{ habit.habit_frequency }}</p>
+                <p>{{habit.habitDescription}}</p>
+                <p class="frequency">Frecuencia semanal: {{ habit.habitFrequency }}</p>
             </div>
             <div class="card-footer">
                 <label class="custom-checkbox">

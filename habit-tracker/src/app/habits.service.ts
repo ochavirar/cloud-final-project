@@ -15,4 +15,17 @@ export class HabitsService {
   getHabits(): Observable<any> { 
     return this.http.get<any>(this.apiUrl);
   }
+
+  createHabit(
+    user_id:string,
+    habitName: string,
+    habitDescription: string,
+    habitFrequency: number
+  ): any{
+    return this.http.post<any>(this.apiUrl, {user_id, habitName, habitDescription, habitFrequency});
+  }
+
+  getHabitsByUser(id: string){
+    return this.http.get(this.apiUrl+"/filter/"+id);
+  }
 }

@@ -1,0 +1,20 @@
+<form [formGroup]="habitForm" (ngSubmit)="onHabitCreation()">
+    <div class="form-group">
+      <label for="habitName">Habit Name</label>
+      <input type="text" class="form-control" id="habitName" name="habitName" formControlName="habitName">
+    </div>
+  
+    <div class="form-group">
+      <label for="habitDescription">Habit Description</label>
+      <input type="text" class="form-control" id="habitDescription" name="habitDescription" formControlName="habitDescription">
+    </div>
+  
+    <div class="form-group">
+      <label for="frequency">Frequency (1-7)</label>
+      <input type="number" class="form-control" id="frequency" name="frequency" min="1" max="7" formControlName="frequency">
+    </div>
+  
+    <button type="button" class="btn btn-secondary" (click)="goBack()">Cancel</button>
+    <button type="submit" class="btn btn-primary">Confirm</button>
+  </form>
+  
