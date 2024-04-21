@@ -28,7 +28,20 @@ export class UserService {
       {email, password, name, phoneNumber, location, about})
   }
 
-  getUserByID(id:string):any{
+  putUser(
+    id:string,
+    email:string,
+    password: string,
+    name: string,
+    phoneNumber: string,
+    location: string,
+    about: string
+  ): any {
+    return this.http.put<any>(this.apiUrl+"/"+id, 
+      {email, password, name, phoneNumber, location, about})
+  }
+
+  getUserByID(id:any):any{
     return this.http.get<any>(this.apiUrl+"/"+id);
   }
 }

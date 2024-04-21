@@ -6,15 +6,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HabitsService } from './habits.service';
 import { AuthService } from './auth.service';
 import { UserService } from './users.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ReactiveFormsModule, HttpClientModule], // Añadir HttpClientModule aquí
-  providers: [HabitsService,AuthService, UserService],
+  imports: [RouterOutlet, ReactiveFormsModule, HttpClientModule, FormsModule], // Añadir HttpClientModule aquí
+  providers: [HabitsService,AuthService,UserService],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'habit-tracker';
 }
