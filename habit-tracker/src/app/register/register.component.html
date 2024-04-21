@@ -1,11 +1,11 @@
 <div class="register-container">
     <div class="form-container">
         <h2>Create an account</h2>
-        <form>
-            <input type="text" placeholder="Full name">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password">
-            <button type="submit" (click)="goToHabits()">Sign in</button>
+        <form [formGroup]="signUpForm" (ngSubmit)="onSignUp()">
+            <input type="text" formControlName="name" placeholder="Full name">
+            <input type="email" formControlName="email" placeholder="Email">
+            <input type="password" formControlName="password" placeholder="Password">
+            <button type="submit">Sign up</button>
             <p>Or sign in with:</p>
             <div class="social-icons">
                 <a href="https://www.google.com"><img src="./../../assets/google-icon.png" alt="Google"></a>

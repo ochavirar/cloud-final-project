@@ -36,6 +36,7 @@ export class LoginComponent implements OnInit {
       ).subscribe({
         next: (response) => {
           if (response.password == this.loginForm.value.password) { 
+            localStorage.setItem("userID", response.user_id);
             this.router.navigate(['/habits']); 
           } else {
             this.invalidLogin = true; 

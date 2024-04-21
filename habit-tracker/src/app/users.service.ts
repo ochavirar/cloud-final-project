@@ -15,4 +15,20 @@ export class UserService {
   getUsers(): Observable<UserProfileComponent[]> {
     return this.http.get<UserProfileComponent[]>(this.apiUrl);
   }
+
+  postNewUser(
+    email:string,
+    password: string,
+    name: string,
+    phoneNumber: string,
+    location: string,
+    about: string
+  ): any {
+    return this.http.post<any>(this.apiUrl, 
+      {email, password, name, phoneNumber, location, about})
+  }
+
+  getUserByID(id:string):any{
+    return this.http.get<any>(this.apiUrl+"/"+id);
+  }
 }

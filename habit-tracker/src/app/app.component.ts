@@ -5,12 +5,13 @@ import { HttpClientModule } from '@angular/common/http'; // Importar HttpClientM
 import { BrowserModule } from '@angular/platform-browser';
 import { HabitsService } from './habits.service';
 import { AuthService } from './auth.service';
+import { UserService } from './users.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, ReactiveFormsModule, HttpClientModule], // Añadir HttpClientModule aquí
-  providers: [HabitsService,AuthService],
+  providers: [HabitsService,AuthService, UserService],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
