@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
       email: ['', Validators.required],
-      password: ['', [Validators.required, Validators.minLength(6)]]
+      password: ['', [Validators.required]]
     });
   }
 
@@ -33,10 +33,9 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.valid) {
       this.authService.validateUser( 
         this.loginForm.value.email, 
-        this.loginForm.value.password
       ).subscribe({
         next: (response) => {
-          if (response.valid) { 
+          if (response.password == this.loginForm.value.password) { 
             this.router.navigate(['/habits']); 
           } else {
             this.invalidLogin = true; 

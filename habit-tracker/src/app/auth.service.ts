@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'https://txtex89254.execute-api.us-east-1.amazonaws.com/users';
+  private apiUrl = 'https://txtex89254.execute-api.us-east-1.amazonaws.com/users/auth';
 
   constructor(private http: HttpClient) { }
 
-  validateUser(email: string, password: string): Observable<any> {
-    return this.http.post(this.apiUrl, { email, password });
+  validateUser(email: string): Observable<any> {
+    return this.http.get(this.apiUrl+"/"+email);
   }
 }
